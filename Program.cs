@@ -1,22 +1,23 @@
 ﻿using System;
 
-namespace Week_1_Dan_Witherspoon
+namespace InClass_Week2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //This class is awesome
-            //This program multiplies 2 numbers
+            Car myMobile = new Car();
+            myMobile.make = "Jeep";
+            myMobile.model = "Liberty";
+            myMobile.color = "Blue";
 
-            string str1, str2;
-
-            str1 = "hello world";
-            str2 = "Dan Witherspoon";
-
-
-            Console.WriteLine(str1 + " from " + str2);
+            Console.WriteLine("Enter the year of your car ");
+            //myMobile.year = Console.Readline();
+            myMobile.year = Convert.ToInt32(Console.ReadLine());
             
-        }
-    }
+            Console.WriteLine("I have a " + myMobile.color + " " + myMobile.make + " " + myMobile.model);
+            Console.WriteLine("I have a {0} {1} {2} {3}", myMobile.color, myMobile.make, myMobile.model, myMobile.year
+                ); ;
+        }   
+    } 
 }
